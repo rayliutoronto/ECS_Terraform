@@ -1,0 +1,30 @@
+[
+    {
+        "name": "eis-data",
+        "image": "c3api/c3api_data",
+        "cpu": 0,
+        "memoryReservation": 256,
+        "links": [],
+        "portMappings": [
+            {
+                "containerPort": 8080,
+                "hostPort": 8080,
+                "protocol": "tcp"
+            }
+        ],
+        "essential": true,
+        "entryPoint": [],
+        "command": [],
+        "environment": [],
+        "mountPoints": [],
+        "volumesFrom": [],
+		"logConfiguration": {
+		  "logDriver": "awslogs",
+		  "options": {
+			"awslogs-region": "ca-central-1",
+			"awslogs-group": "eis-data",
+			"awslogs-stream-prefix": "eis-data"
+		  }
+		}
+    }
+]
