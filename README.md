@@ -12,7 +12,7 @@ Steps:
     - Ensure network connection to AWS is ready
     - There are many ways to set Access Key ID and Secret Access Key to make terraform work properly. We just use the simplest way: set it into environment variables like what it is done in env.bat for Windows.
     - `terraform init`, which will initialize everything necessary for you including download cloud provider's CLI. The step is requred to be executed once if you have not executed it, while it has no bad impact to execute it many times since it is idempotent. 
-    - `terraform apply -auto-approve`, which will create everything specified in the scripts. Endpoint of deployed API is printed in the same console after execution is done.
+    - `terraform apply -auto-approve`, which will create everything specified in the scripts in region `ca-central-1`. Endpoint of deployed API is printed in the same console after execution is done.
         - Notice: there is a bug in AWS CLI. So if you encounter this error describing "this is bug of provider" or something, just run `terraform apply -auto-approve` again and you will be fine.
         - Notice: for the first time deployment, AWS may need some time to create resources, so you need refresh the endpoint serveral times to get response.
     - `terraform destroy -auto-approve`, which deletes all objects created and described in scripts.
